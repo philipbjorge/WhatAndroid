@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.13.2'
+        classpath 'com.android.tools.build:gradle:1.1.0'
     }
 }
 
@@ -34,7 +34,7 @@ android {
 
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             signingConfig signingConfigs.release
         }
     }
@@ -50,9 +50,10 @@ dependencies {
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile files('libs/WhatAPI.jar')
-    compile files('libs/commons-io-2.4.jar')
-    compile files('libs/commons-lang3-3.1.jar')
-    compile files('libs/commons-codec-1.9.jar')
-    compile files('libs/gson-2.2.4.jar')
-    compile files('libs/signpost-core-1.2.1.2.jar')
+    compile 'commons-io:commons-io:2.4'
+    compile 'commons-lang:commons-lang:2.4'
+    compile 'commons-codec:commons-codec:1.9'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'oauth.signpost:signpost-core:1.2.1.2'
+    compile files('/Users/philipbjorge/Projects/WhatAndroid/libs/WhatAPI.jar')
 }
